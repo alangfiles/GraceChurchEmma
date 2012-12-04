@@ -326,8 +326,10 @@ textarea {
   background-image: url(../img/GCBanner.jpg);
   background-repeat: no-repeat;
   padding-top:10px;
+  min-height:240px;
 }
 #hero-text{
   max-width: 500px;
   min-width: 200px;
+  text-align: right;
 }
