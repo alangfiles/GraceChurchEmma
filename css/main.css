@@ -323,6 +323,11 @@ textarea {
 }
 
 .hero-unit{
-  background-image: url(../img/Mountains.jpg);
+  background-image: url(../img/GCBanner.jpg);
   background-repeat: no-repeat;
+  padding-top:10px;
+}
+#hero-text{
+  max-width: 500px;
+  min-width: 200px;
 }
