@@ -322,3 +322,7 @@ textarea {
     }
 }
 
+.hero-unit{
+  background-image: url(../img/Mountains.jpg);
+  background-repeat: no-repeat;
+}
