@@ -53,44 +53,56 @@
     </div>
 
     <div class="container">
-
-      <div class="hero-unit">
-        <div id="hero-text" class="pull-right">
-          <h1>Grace Church</h1>
-          <p>We're a church in Colorado, trying to serve people and preach the good news that has changed our lives.</p>
-          <p><a class="btn btn-primary btn-large" href="worship.html">Learn more &raquo;</a></p>
-        </div>
-        <br/>
-      </div>
-
-      <!-- Example row of columns -->
       <div class="row">
-        <div class="span4">
-          <h2>Welcome</h2>
-          <img src="img/Column1.jpg">
-          <p><br/>Grace Church of the Roaring Fork Valley is a Christian church that believes God has lavished His love and grace upon us through His Son, our Savior, Jesus Christ. God’s Grace changes everything, and we gather to celebrate and grow in that grace through worship, teaching, fellowship, and service. We invite you to join us in the journey of living by grace.</p>
-          <p><a class="btn" href="about.html">More Info &raquo;</a></p>
+        <div class="span5">
+          <h3>Contact Us!</h3>
+          <p>If you are a newcomer to Grace Church, we’d love to hear from you and make it possible for you to stay in touch with us. Please provide the contact info requested below.</br></br>
+          If you have a prayer request please write it below. If you would like to remain anonymous, that is fine. We will pray for you! If you would like one of the prayer team members to pray with you, please note your telephone number and one of us will call you. All prayer requests will remain confidential within the prayer team - a leader and/or one other person will be praying for you.</p>
         </div>
-        <div class="span4">
-          <h2>Location</h2>
-          <div id="mapviewer"><iframe id="map" Name="mapFrame" scrolling="no" width="300" height="300" frameborder="0" src="http://www.bing.com/maps/embed/?lvl=14&amp;cp=39.36315507539934~-107.06462075871873&amp;sty=r&amp;draggable=false&amp;v=2&amp;dir=0&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW&amp;pp=39.3632545471191~-107.063484191895&amp;mkt=en-us&amp;gen=false&amp;emid=894809c2-e280-f49f-a7cc-81714d51062f&amp;w=300&amp;h=300"></iframe>
-            <div id="LME_maplinks" style="line-height:20px;">
-              <a class="btn" href="http://www.bing.com/maps/?mm_embed=map&amp;cp=39.36315507539934~-107.06462075871873&amp;lvl=14&amp;sty=r&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW" target="_blank">View Larger Map</a>&nbsp;
-              <a class="btn" href="http://www.bing.com/maps/?mm_embed=dir&amp;cp=39.36315507539934~-107.06462075871873&amp;rtp=~pos.39.3632545471191_-107.063484191895_1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;lvl=14&amp;sty=r&amp;form=LMLTEW" target="_blank">Get Directions</a>&nbsp;
-            </div>
-          </div>
+        <div class="span7">
           <br/>
-       </div>
-        <div class="span4">
-          <h2>Mission</h2>
-          <img src="img/Column3.jpg">
-          <p><br/>Worshipping God, celebrating His grace revealed in Jesus Christ, and responding by the work of His Spirit are at the center of our home life at Grace Church. </p>
-          <p><a class="btn" href="ministries.html">More Info &raquo;</a></p>
+          <form class="form-horizontal" id="formular" name="formular" method="post" onsubmit="return formular$checkFormular();" action="http://cgi-wsc.chi.us.siteprotect.com/extras/public/formular.cls/send?accountId=AHW050INP4LZ">
+            <input type="hidden" name="accountId" value="AHW050INP4LZ"><input type="hidden" name="instanceId" value="15188">
+            <input type="hidden" name="redirectUrl" value="">
+            <input type="hidden" name="LC" value="en_US">
+            <div class="control-group">
+              <label class="control-label" for="firstname">First name</label>
+              <div class="controls">
+                <input id="firstname" type="text" name="firstname" value="" additional_data="" placeholder="First Name">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="name">Last name</label>
+              <div class="controls">
+                <input id="name" type="text" name="name" value="" additional_data="" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="email">E-mail address</label>
+              <div class="controls">
+                <input id="email" type="text" name="email" value=""additional_data="" placeholder="Email">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="comment">Comment</label>
+              <div class="controls">
+                <textarea id="comment" name="comment" cols="80" rows="5" additional_data=""></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="formFieldName_1">Prayer Request</label>
+              <div class="controls">
+                <textarea id="formFieldName_1" name="formFieldName_1" cols="80" rows="5" additional_data=""></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <input type="submit" class="btn" name="submit" id="submit" value="Submit" additional_data="">
+              </div>
+            </div>
+          </form>
         </div>
-      </div>
-
       <hr>
-
       <footer>
         <p>&copy; Company 2012</p>
       </footer>
