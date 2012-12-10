@@ -67,16 +67,17 @@
       <div class="row">
         <div class="span4">
           <h2>Welcome</h2>
-          <img src="img/Column1.jpg">
+          <img class="img-rounded" src="img/Column1.jpg">
           <p><br/>Grace Church of the Roaring Fork Valley is a Christian church that believes God has lavished His love and grace upon us through His Son, our Savior, Jesus Christ. God’s Grace changes everything, and we gather to celebrate and grow in that grace through worship, teaching, fellowship, and service. We invite you to join us in the journey of living by grace.</p>
           <p><a class="btn" href="about.html">More Info &raquo;</a></p>
         </div>
         <div class="span4">
           <h2>Location</h2>
-          <div id="mapviewer"><iframe id="map" Name="mapFrame" scrolling="no" width="300" height="300" frameborder="0" src="http://www.bing.com/maps/embed/?lvl=14&amp;cp=39.36315507539934~-107.06462075871873&amp;sty=r&amp;draggable=false&amp;v=2&amp;dir=0&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW&amp;pp=39.3632545471191~-107.063484191895&amp;mkt=en-us&amp;gen=false&amp;emid=894809c2-e280-f49f-a7cc-81714d51062f&amp;w=300&amp;h=300"></iframe>
+          <div id="mapviewer">
+            <iframe id="map" Name="mapFrame" scrolling="no" width="364" height="280" frameborder="0" src="http://www.bing.com/maps/embed/?lvl=14&amp;cp=39.3650264123916~-107.06266765328617&amp;sty=r&amp;draggable=false&amp;v=2&amp;dir=0&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW&amp;pp=39.36325454711914~-107.06348419189453&amp;mkt=en-us&amp;gen=false&amp;emid=0c288484-911d-7667-fd43-fe40ea6bd0e7&amp;w=364&amp;h=280"></iframe>
             <div id="LME_maplinks" style="line-height:20px;">
-              <a class="btn" href="http://www.bing.com/maps/?mm_embed=map&amp;cp=39.36315507539934~-107.06462075871873&amp;lvl=14&amp;sty=r&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW" target="_blank">View Larger Map</a>&nbsp;
-              <a class="btn" href="http://www.bing.com/maps/?mm_embed=dir&amp;cp=39.36315507539934~-107.06462075871873&amp;rtp=~pos.39.3632545471191_-107.063484191895_1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;lvl=14&amp;sty=r&amp;form=LMLTEW" target="_blank">Get Directions</a>&nbsp;
+              <a class="btn" id="LME_largerMap" href="http://www.bing.com/maps/?mm_embed=map&amp;cp=39.3650264123916~-107.06266765328617&amp;lvl=14&amp;sty=r&amp;where1=1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;form=LMLTEW" target="_blank">View Larger Map</a>&nbsp;
+              <a class="btn" id="LME_directions" href="http://www.bing.com/maps/?mm_embed=dir&amp;cp=39.3650264123916~-107.06266765328617&amp;rtp=~pos.39.36325454711914_-107.06348419189453_1776+Emma+Rd%2C+Basalt%2C+CO+81621&amp;lvl=14&amp;sty=r&amp;form=LMLTEW" target="_blank">Get Directions</a>&nbsp;
             </div>
           </div>
           <br/>
@@ -103,5 +104,16 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36863420-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
     </body>
 </html>
