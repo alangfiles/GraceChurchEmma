@@ -333,3 +333,13 @@ textarea {
   min-width: 200px;
   text-align: right;
 }
+
+.hero-banner {
+  padding: 60px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
