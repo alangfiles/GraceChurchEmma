@@ -62,46 +62,52 @@
         </div>
         <div class="span7">
           <br/>
-          <form class="form-horizontal" id="formular" name="formular" method="post" onsubmit="return formular$checkFormular();" action="http://cgi-wsc.chi.us.siteprotect.com/extras/public/formular.cls/send?accountId=AHW050INP4LZ">
-            <input type="hidden" name="accountId" value="AHW050INP4LZ"><input type="hidden" name="instanceId" value="15188">
-            <input type="hidden" name="redirectUrl" value="">
-            <input type="hidden" name="LC" value="en_US">
-            <div class="control-group">
-              <label class="control-label" for="firstname">First name</label>
-              <div class="controls">
-                <input id="firstname" type="text" name="firstname" value="" additional_data="" placeholder="First Name">
+          <div id="formAfter" style="display:none;">
+            <br/><br/><br/>
+            <h3> Request sent successfully! </h3>
+          </div>
+          <div id="formBefore">
+            <form class="form-horizontal" id="formular" name="formular">
+              <input type="hidden" name="accountId" value="AHW050INP4LZ"><input type="hidden" name="instanceId" value="15188">
+              <input type="hidden" name="redirectUrl" value="">
+              <input type="hidden" name="LC" value="en_US">
+              <div class="control-group">
+                <label class="control-label" for="firstname">First name</label>
+                <div class="controls">
+                  <input id="firstname" type="text" name="firstname" value="" additional_data="" placeholder="First Name">
+                </div>
               </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="name">Last name</label>
-              <div class="controls">
-                <input id="name" type="text" name="name" value="" additional_data="" placeholder="Last Name">
+              <div class="control-group">
+                <label class="control-label" for="name">Last name</label>
+                <div class="controls">
+                  <input id="name" type="text" name="name" value="" additional_data="" placeholder="Last Name">
+                </div>
               </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="email">E-mail address</label>
-              <div class="controls">
-                <input id="email" type="text" name="email" value=""additional_data="" placeholder="Email">
+              <div class="control-group">
+                <label class="control-label" for="email">E-mail address</label>
+                <div class="controls">
+                  <input id="email" type="text" name="email" value=""additional_data="" placeholder="Email">
+                </div>
               </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="comment">Comment</label>
-              <div class="controls">
-                <textarea id="comment" name="comment" cols="80" rows="5" additional_data=""></textarea>
+              <div class="control-group">
+                <label class="control-label" for="comment">Comment</label>
+                <div class="controls">
+                  <textarea id="comment" name="comment" cols="80" rows="5" additional_data=""></textarea>
+                </div>
               </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="formFieldName_1">Prayer Request</label>
-              <div class="controls">
-                <textarea id="formFieldName_1" name="formFieldName_1" cols="80" rows="5" additional_data=""></textarea>
+              <div class="control-group">
+                <label class="control-label" for="formFieldName_1">Prayer Request</label>
+                <div class="controls">
+                  <textarea id="formFieldName_1" name="formFieldName_1" cols="80" rows="5" additional_data=""></textarea>
+                </div>
               </div>
-            </div>
-            <div class="control-group">
-              <div class="controls">
-                <input type="submit" class="btn" name="submit" id="submit" value="Submit" additional_data="">
+              <div class="control-group">
+                <div class="controls">
+                  <input type="button" class="btn btn-primary" name="send" id="send" value="Submit" additional_data="">
+                </div>
               </div>
+            </form>
             </div>
-          </form>
         </div>
       </div>
       <hr>
@@ -110,13 +116,39 @@
       </footer>
 
     </div> <!-- /container -->
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(function() {
+          $("#send").click(function(){
+            if($("#formFieldName_1").val()=="" && $("#comment").val()=="")
+            {
+              alert("Please enter a comment or a request.");
+            }
+            else{
+              //make and send ajax request
+              $.ajax({  
+                type: "POST",  
+                url: "http://cgi-wsc.chi.us.siteprotect.com/extras/public/formular.cls/send?accountId=AHW050INP4LZ",  
+                data: $("#formular").serialize(),  
+                success: function() {  
+                  $('#formBefore').hide();
+                  $('#formAfter').fadeIn('slow', function() {
+                    // Animation complete
+                  });
+                },
+                error: function() {
+                  alert("There's been an error sending this form.");
+                }    
+              });
+              return false; //don't redirect
+            }//end else
+          }); //end click function     
+        });
+        </script>
         <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-36863420-1']);
