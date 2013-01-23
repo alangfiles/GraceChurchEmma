@@ -62,7 +62,7 @@
         </div>
         <div class="span7">
           <br/>
-          <div id="formAfter" style="display:none;">
+          <div id="formAfter" style="display:none;text-align:center;">
             <br/><br/><br/>
             <h3> Request sent successfully! </h3>
           </div>
@@ -134,15 +134,12 @@
                 type: "POST",  
                 url: "http://cgi-wsc.chi.us.siteprotect.com/extras/public/formular.cls/send?accountId=AHW050INP4LZ",  
                 data: $("#formular").serialize(),  
-                success: function() {  
+                complete: function() {  
                   $('#formBefore').hide();
                   $('#formAfter').fadeIn('slow', function() {
                     // Animation complete
                   });
-                },
-                error: function() {
-                  alert("There's been an error sending this form.");
-                }    
+                }
               });
               return false; //don't redirect
             }//end else
