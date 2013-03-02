@@ -343,3 +343,6 @@ textarea {
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+#map{
+  width:100%;
+}
